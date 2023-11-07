@@ -4,7 +4,6 @@ const showAnimals = async () => {
 
     if (!objectsJSON) {
         console.error("Invalid load of JSON");
-        // You might want to show some error to the user here
         spaceObjectsDiv.innerHTML = "<p>Failed to load space objects. Please try again later.</p>";
         return;
     }
@@ -38,9 +37,9 @@ const showAnimals = async () => {
         section.append(funFact);
 
         const img = document.createElement("img");
-        img.src = object.img || "path_to_default_animal.jpg"; // Use a default image if none provided
+        img.src = object.img || "path_to_default_animal.jpg"; 
         img.alt = `Image of ${object.name}`;
-        img.onerror = () => { img.src = "path_to_default_animal.jpg"; }; // Fallback to default image if the provided one fails to load
+        img.onerror = () => { img.src = "path_to_default_animal.jpg"; }; 
         section.append(img);
     });
 };

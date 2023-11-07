@@ -2,15 +2,12 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
-// Serve static files from the 'public' directory
-app.use(express.static(path.join(__dirname, 'public')));
+sapp.use(express.static(path.join(__dirname, 'public')));
 
-// Respond with 'index.html' when a GET request is made to the homepage
 app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-// API endpoint for serving space objects JSON data
 app.get('/api/animals', (req, res) => {
     const animalFacts = [
         {
@@ -78,7 +75,6 @@ app.get('/api/animals', (req, res) => {
 });
 
 
-// Listen on the specified PORT, or default to port 3000
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server is listening on port ${PORT}`);

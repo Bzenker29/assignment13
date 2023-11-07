@@ -1,4 +1,4 @@
-/* Base Styles */
+/* Variables */
 :root {
     --background: #000080;
     --main-color: black;
@@ -6,6 +6,7 @@
     --card-background: #E0B0FF;
 }
 
+/* Structure */
 body, html {
     margin: auto;
     padding: 0;
@@ -20,7 +21,6 @@ h1 {
     color: var(--accent-color);
 }
 
-/* Card Layout */
 #animals-div {
     display: flex;
     flex-wrap: wrap;
@@ -43,13 +43,13 @@ section img {
     border-radius: 2px;
 }
 
-/* Responsive Design */
+/* Media Query */
 @media only screen and (min-width: 900px) {
     #animals-div {
         justify-content: space-evenly;
     }
 
     section {
-        width: calc(25% - 40px); /* Adjust width while accounting for margin */
+        width: calc(25% - 40px); 
     }
 }
